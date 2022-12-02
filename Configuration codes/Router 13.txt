@@ -1,0 +1,23 @@
+en
+configure terminal
+int g 6/0
+ip address 192.168.1.129 255.255.255.192
+no sh
+ex
+-------------
+int g 7/0
+ip address 192.168.1.201 255.255.255.252
+no sh
+ex
+------------
+int g 8/0
+ip address 192.168.1.197 255.255.255.252
+no sh
+ex
+-----------
+router rip 
+version 2
+network 192.168.1.128
+network 192.168.1.200
+network 192.168.1.196
+ex
